@@ -32949,9 +32949,78 @@ textarea.input-text--error,
 .popup-map__list{
     overflow: hidden;
     background: #fff;
+    height: 435px;
+    position: relative;
 }
 .popup-map-title{
     font-size: 500;
     padding: 5px 0;
     font-size: 16px;
+}
+.popup-map__list-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+        padding-top: 36px;
+        margin-top: -1px;
+}
+.popup-map__count{
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 5px 20px;
+    color: #aaadb0;
+    font-size: 15px;
+        background: #fff;
+    position: relative;
+    z-index: 3;
+}
+
+a.map-goto{
+    display: block;
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    padding: 20px 20px 20px 43px;
+    color: #000;
+    position: relative;
+    font-size: 15px;
+    line-height: 17px;
+    text-decoration: none!important;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    background: #fff;
+}
+a.map-goto:hover{
+    background: #fffcc9;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+
+}
+.map-goto__number{
+    font-weight: 500;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.map-goto__sum{
+    padding-top: 8px;
+}
+.map-goto__sum span{
+    font-weight: 500;
+}
+
+.popup-map__second-level{
+    display: none;
+}
+.popup-map__descr{
+    display: none;
+}
+.popup-map__descr.active{
+    display: block;
 }

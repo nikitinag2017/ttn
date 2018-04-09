@@ -858,6 +858,17 @@ $(document).ready(function() {
             }
 		},
 	});
+
+	//MAP-change ADRESS
+	$('body').on('click', '.map-goto', function(e){
+	    e.preventDefault();
+	    $('.popup-map__first-level').hide();
+	    $('.popup-map__second-level').show();
+        var go = $(this).data('go');
+        $(".popup-map__descr").removeClass('active');
+        $("#descr"+go).addClass('active');
+        return false;
+    });
 });
 
 
@@ -871,13 +882,17 @@ function init(){
 		[56.025, 36.981],
 		[56.020, 36.981],
 		[56.021, 36.983],
-		[56.027, 36.987]
+		[56.027, 36.987],
+
+		[56.123, 36.388],
+		[56.125, 36.381],
+		[56.120, 36.381],
 	],
 	myMap,
 	myClusterer;
  
     myMap = new ymaps.Map("map", {
-        center: [55.76, 37.64],
+        center: [56.023, 36.988],
 		zoom: 7
     });
 
