@@ -839,9 +839,63 @@ $(document).ready(function() {
 
     sliderTabsStart();
 
+    ymaps.ready(init);
 
-    
+    $('.popup-map').magnificPopup({
+		type: 'inline',
+		removalDelay: 500,
+		closeBtnInside: true,
+		fixedContentPos: false,
+		callbacks: {
+			beforeOpen: function() {
+				this.st.mainClass = this.st.el.attr('data-effect');
+			},
+			open: function(){
+				$('body').addClass('noscroll');
+		    },
+		    close: function() {
+                 $('body').removeClass('noscroll');
+            }
+		},
+	});
 });
+
+
+function init(){     
+ 
+    var myMap;
+
+    var myGeoObjects = [],
+	coords = [
+		[56.023, 36.988],
+		[56.025, 36.981],
+		[56.020, 36.981],
+		[56.021, 36.983],
+		[56.027, 36.987]
+	],
+	myMap,
+	myClusterer;
+ 
+    myMap = new ymaps.Map("map", {
+        center: [55.76, 37.64],
+		zoom: 7
+    });
+
+    myClusterer = new ymaps.Clusterer();
+
+	for (var i = 0; i < coords.length; i++) {
+		myGeoObjects[i] = new ymaps.Placemark(
+			coords[i]
+		);
+	}
+
+	myClusterer.add(myGeoObjects);
+	myMap.geoObjects.add(myClusterer);
+
+
+}
+
+
 
 $(window).resize(function() {
 	sliderTabsStart();
