@@ -839,25 +839,30 @@ $(document).ready(function() {
 
     sliderTabsStart();
 
-    ymaps.ready(init);
+    if ($('#map').length>0) {
+    	ymaps.ready(init);
+    }
 
-    $('.popup-map').magnificPopup({
-		type: 'inline',
-		removalDelay: 500,
-		closeBtnInside: true,
-		fixedContentPos: false,
-		callbacks: {
-			beforeOpen: function() {
-				this.st.mainClass = this.st.el.attr('data-effect');
+    if ($('.popup-map').length>0) {
+	    $('.popup-map').magnificPopup({
+			type: 'inline',
+			removalDelay: 500,
+			closeBtnInside: true,
+			fixedContentPos: false,
+			callbacks: {
+				beforeOpen: function() {
+					this.st.mainClass = this.st.el.attr('data-effect');
+				},
+				open: function(){
+					$('body').addClass('noscroll');
+					ymaps.ready(init);
+			    },
+			    close: function() {
+	                 $('body').removeClass('noscroll');
+	            }
 			},
-			open: function(){
-				$('body').addClass('noscroll');
-		    },
-		    close: function() {
-                 $('body').removeClass('noscroll');
-            }
-		},
-	});
+		});
+	}
 
 	//MAP-change ADRESS
 	$('body').on('click', '.map-goto', function(e){
@@ -867,7 +872,17 @@ $(document).ready(function() {
         var go = $(this).data('go');
         $(".popup-map__descr").removeClass('active');
         $("#descr"+go).addClass('active');
-        return false;
+
+        $(".popup-map__count").hide();
+        $('.popup-map__back').css('display','block');
+    });
+    //back
+    $('body').on('click', '.popup-map__back', function(e){
+	    e.preventDefault();
+	    $(".popup-map__descr").removeClass('active');
+	    $(this).hide();
+	    $(".popup-map__count").show();
+	    $('.popup-map__first-level').show();
     });
 });
 
@@ -879,13 +894,13 @@ function init(){
     var myGeoObjects = [],
 	coords = [
 		[56.023, 36.988],
-		[56.025, 36.981],
-		[56.020, 36.981],
-		[56.021, 36.983],
+		// [56.025, 36.981],
+		// [56.020, 36.981],
+		// [56.021, 36.983],
 		[56.027, 36.987],
 
-		[56.123, 36.388],
-		[56.125, 36.381],
+		// [56.123, 36.388],
+		// [56.125, 36.381],
 		[56.120, 36.381],
 	],
 	myMap,
@@ -908,6 +923,13 @@ function init(){
 	myMap.geoObjects.add(myClusterer);
 
 
+	$('body').on('click','.map-goto',function(e){
+	    e.preventDefault();
+	    var pointlong = $(this).data("pointlong");
+	    var pointlat = $(this).data("pointlat");
+	    myMap.setCenter([pointlat, pointlong], 18);
+	});
+	//myMap.setBounds(myMap.geoObjects.getBounds());
 }
 
 
