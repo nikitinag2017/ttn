@@ -30997,7 +30997,7 @@ form.track_order input[type="submit"] {
 
 .woocommerce-breadcrumb {
     width: 100%;
-    padding-left: 1em;
+    /*padding-left: 1em;*/
     margin-bottom: 3.333em;
     font-size: 0.938em;
     color: #444444;
