@@ -665,26 +665,26 @@
 
 
 	    $('.home-slider').on('init', function(event, slick){
-       		$('.slick-active .caption .pre-title').removeClass('hidden');
-            $('.slick-active .caption .pre-title').addClass('animated slideInRight');
+       		$(this).find('.slick-active .caption .pre-title').removeClass('hidden');
+            $(this).find('.slick-active .caption .pre-title').addClass('animated slideInRight');
 
-            $('.slick-active .caption .title').removeClass('hidden');
-            $('.slick-active .caption .title').addClass('animated slideInRight');
+            $(this).find('.slick-active .caption .title').removeClass('hidden');
+            $(this).find('.slick-active .caption .title').addClass('animated slideInRight');
 
-            $('.slick-active .caption .sub-title').removeClass('hidden');
-            $('.slick-active .caption .sub-title').addClass('animated slideInRight');
+            $(this).find('.slick-active .caption .sub-title').removeClass('hidden');
+            $(this).find('.slick-active .caption .sub-title').addClass('animated slideInRight');
 
-            $('.slick-active .caption .button').removeClass('hidden');
-            $('.slick-active .caption .button').addClass('animated slideInDown');
+            $(this).find('.slick-active .caption .button').removeClass('hidden');
+            $(this).find('.slick-active .caption .button').addClass('animated slideInDown');
 
-            $('.slick-active .caption .offer-price').removeClass('hidden');
-            $('.slick-active .caption .offer-price').addClass('animated fadeInLeft');
+            $(this).find('.slick-active .caption .offer-price').removeClass('hidden');
+            $(this).find('.slick-active .caption .offer-price').addClass('animated fadeInLeft');
 
-            $('.slick-active .caption .sale-price').removeClass('hidden');
+            $(this).find('.slick-active .caption .sale-price').removeClass('hidden');
             $('.slick-active .caption .sale-price').addClass('animated fadeInRight');
 
-            $('.slick-active .caption .bottom-caption').removeClass('hidden');
-            $('.slick-active .caption .bottom-caption').addClass('animated slideInDown');
+            $(this).find('.slick-active .caption .bottom-caption').removeClass('hidden');
+            $(this).find('.slick-active .caption .bottom-caption').addClass('animated slideInDown');
         });
 
 
@@ -706,52 +706,70 @@
 
 
        	$('.home-slider').on('afterChange', function(event, slick, currentSlide){
-       		$('.slick-active .caption .pre-title').removeClass('hidden');
-            $('.slick-active .caption .pre-title').addClass('animated slideInRight');
+       		$(this).find('.slick-active .caption .pre-title').removeClass('hidden');
+            $(this).find('.slick-active .caption .pre-title').addClass('animated slideInRight');
 
-            $('.slick-active .caption .title').removeClass('hidden');
-            $('.slick-active .caption .title').addClass('animated slideInRight');
+            $(this).find('.slick-active .caption .title').removeClass('hidden');
+            $(this).find('.slick-active .caption .title').addClass('animated slideInRight');
 
-            $('.slick-active .caption .sub-title').removeClass('hidden');
-            $('.slick-active .caption .sub-title').addClass('animated slideInRight');
+            $(this).find('.slick-active .caption .sub-title').removeClass('hidden');
+            $(this).find('.slick-active .caption .sub-title').addClass('animated slideInRight');
 
-            $('.slick-active .caption .button').removeClass('hidden');
-            $('.slick-active .caption .button').addClass('animated slideInDown');
+            $(this).find('.slick-active .caption .button').removeClass('hidden');
+            $(this).find('.slick-active .caption .button').addClass('animated slideInDown');
 
-            $('.slick-active .caption .offer-price').removeClass('hidden');
-            $('.slick-active .caption .offer-price').addClass('animated fadeInLeft');
+            $(this).find('.slick-active .caption .offer-price').removeClass('hidden');
+            $(this).find('.slick-active .caption .offer-price').addClass('animated fadeInLeft');
 
-            $('.slick-active .caption .sale-price').removeClass('hidden');
-            $('.slick-active .caption .sale-price').addClass('animated fadeInRight');
+            $(this).find('.slick-active .caption .sale-price').removeClass('hidden');
+            $(this).find('.slick-active .caption .sale-price').addClass('animated fadeInRight');
 
-            $('.slick-active .caption .bottom-caption').removeClass('hidden');
-            $('.slick-active .caption .bottom-caption').addClass('animated slideInDown');
+            $(this).find('.slick-active .caption .bottom-caption').removeClass('hidden');
+            $(this).find('.slick-active .caption .bottom-caption').addClass('animated slideInDown');
         });
         
 
         $('.home-slider').on('beforeChange', function(event, slick, currentSlide){
-        	$('.slick-active .caption .pre-title').removeClass('animated slideInRight');
-            $('.slick-active .caption .pre-title').addClass('hidden');
+        	$(this).find('.slick-active .caption .pre-title').removeClass('animated slideInRight');
+            $(this).find('.slick-active .caption .pre-title').addClass('hidden');
 
-            $('.slick-active .caption .title').removeClass('animated slideInRight');
-            $('.slick-active .caption .title').addClass('hidden');
+            $(this).find('.slick-active .caption .title').removeClass('animated slideInRight');
+            $(this).find('.slick-active .caption .title').addClass('hidden');
 
-            $('.slick-active .caption .sub-title').removeClass('animated slideInRight');
-            $('.slick-active .caption .sub-title').addClass('hidden');
+            $(this).find('.slick-active .caption .sub-title').removeClass('animated slideInRight');
+            $(this).find('.slick-active .caption .sub-title').addClass('hidden');
 
-            $('.slick-active .caption .button').removeClass('animated slideInDown');
-            $('.slick-active .caption .button').addClass('hidden');
+            $(this).find('.slick-active .caption .button').removeClass('animated slideInDown');
+            $(this).find('.slick-active .caption .button').addClass('hidden');
 
-            $('.slick-active .caption .offer-price').removeClass('animated fadeInLeft');
-            $('.slick-active .caption .offer-price').addClass('hidden');
+            $(this).find('.slick-active .caption .offer-price').removeClass('animated fadeInLeft');
+            $(this).find('.slick-active .caption .offer-price').addClass('hidden');
 
-            $('.slick-active .caption .sale-price').removeClass('animated fadeInRight');
-            $('.slick-active .caption .sale-price').addClass('hidden');
+            $(this).find('.slick-active .caption .sale-price').removeClass('animated fadeInRight');
+            $(this).find('.slick-active .caption .sale-price').addClass('hidden');
 
-            $('.slick-active .caption .bottom-caption').removeClass('animated slideInDown');
-            $('.slick-active .caption .bottom-caption').addClass('hidden');
+            $(this).find('.slick-active .caption .bottom-caption').removeClass('animated slideInDown');
+            $(this).find('.slick-active .caption .bottom-caption').addClass('hidden');
 
         });
+
+
+
+
+	    $('.home-slider__sm').slick({
+			dots: true,
+			infinite: true,
+			speed: 500,
+			slidesToShow: 1,
+			autoplay: true,
+			pauseOnHover: false,
+			arrows: false,
+			autoplaySpeed: 5000,
+			fade: true,
+			lazyLoad: 'progressive',
+			cssEase: 'linear'	
+	    });
+
 	});
 
 	
