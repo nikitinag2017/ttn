@@ -14223,7 +14223,7 @@ article .site-content .home-v5-slider .slider-1 .more-link:hover {
  */
 
 .widget {
-    margin: 0 0 20px;
+    margin: 0 0 16px;
 }
 .widget select {
     width: 100%;
@@ -31954,9 +31954,8 @@ span.wish-count__list i{
 .input-item__label{
     border-bottom: 0px;
     font-size: 14px;
-    padding-bottom: 5px;
     font-weight: 500;
-    margin-bottom: 0.563em;
+    margin-bottom: 5px;
     position: relative;
     
 }
@@ -32503,8 +32502,8 @@ table.cart td.product-name a {
 .site-header .site-logo-anchor img,
 .site-header .site-logo-link img,
 .site-header .custom-logo-link img {
-    min-width: 179px;
-    height: 45px;
+   /* min-width: 179px;
+    height: 45px;*/
 }
 
 input[type="submit"].btn-primary{
@@ -33551,4 +33550,23 @@ table.cart td.product-name a{
     position: absolute;
     bottom: 10px;
     z-index: 9;
+}
+.checkbox-item .disabled{
+    color: #e5e2db;
+    cursor: default!important;
+}
+#dop{
+    text-align: center;
+}
+#dop:hover{
+    text-decoration: underline;
+    color: #c45500;
+}
+.checkbox-item__count{
+       font-size: 11px;
+    color: #a0a0a0;
+    padding-left: 3px;
+}
+#filter-form{
+    margin-bottom: 10px;
 }
