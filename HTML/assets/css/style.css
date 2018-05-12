@@ -22194,7 +22194,7 @@ table.shop_table_responsive.my_account_orders .order-actions:before {
 .single-product .product_title {
     font-size: 1.438em;
     letter-spacing: -0.01em;
-    color: #444;
+    color: #0066c0;
     font-weight: 500;
     line-height: 0.913em;
     margin-right: 40px;
@@ -27611,7 +27611,6 @@ article .products .product .added.more-link {
 .products .list-view-small.product .media-body .product-info .woocommerce-loop-product__title {
     font-size: 1.5em;
     font-weight: 500;
-    color: #444;
     margin-bottom: 6px;
     line-height: 1.2;
     margin-right: 40px;
@@ -30904,7 +30903,7 @@ form.track_order input[type="submit"] {
     position: absolute;
     width: 100%;
     top: 0;
-    left: 0;
+    left: 5px;
     /*z-index: 1;*/
 }
 .yith-wcwl-add-to-wishlist .add_to_wishlist {
@@ -30915,8 +30914,8 @@ form.track_order input[type="submit"] {
     content: "\6b";
     font-family: 'techmarket-icons';
     position: absolute;
-    top: 8px;
-    right: 14px;
+    top: 0;
+    right: 0;
     text-indent: 0;
     color: #444;
     font-size: 1.429em;
@@ -31024,6 +31023,7 @@ form.track_order input[type="submit"] {
 
 .brand-code{
     margin-bottom: 20px;
+        color: #a0a0a0;
 }
 
 
@@ -31186,7 +31186,7 @@ form.track_order input[type="submit"] {
 .woocommerce-loop-product__link .brand-code{
     margin-bottom: 10px;
     margin-top: 10px;
-    color: #000;
+        color: #a0a0a0;
 }
 
 .amount-old{
@@ -31700,6 +31700,7 @@ span.wish-count__list i{
     text-indent: -9999em;
     width: 20px;
     height: 32px;
+    z-index: 1;
 }
 
 .catalog-item-mobile{
