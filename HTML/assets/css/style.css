@@ -30975,6 +30975,7 @@ form.track_order input[type="submit"] {
 
 .footer-widgets-block .menu-item a{
     color: #000;
+    white-space: nowrap;
 }
 
 .footer-widgets-block .menu-item a:hover,
