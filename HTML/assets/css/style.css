@@ -2475,7 +2475,8 @@ body.can-uppercase .section-categories-carousel.section-top-categories .readmore
 .site-header .site-logo-anchor,
 .site-header .site-logo-link,
 .site-header .custom-logo-link {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
 }
 @media (min-width: 500px) {
     .site-header .site-logo-anchor img,
