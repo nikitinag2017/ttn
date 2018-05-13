@@ -9337,7 +9337,6 @@ article .wl-create-new.more-link:before {
     border: 2px solid #eee;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    overflow: hidden;
     height: 100%;
 }
 .departments-menu > .dropdown-menu .menu-item-has-children > .dropdown-menu li > a {
@@ -10082,6 +10081,7 @@ article .wl-create-new.more-link:before {
 .yamm .yamm-content .bg-yamm-content {
     position: absolute;
     right: 0;
+    top: 0;
     bottom: 0;
     -webkit-clip-path: polygon(0% 10%, 0% 100%, 10000% 100%);
     clip-path: polygon(0% 10%, 0% 100%, 10000% 100%);
@@ -33569,4 +33569,18 @@ table.cart td.product-name a{
 }
 #filter-form{
     margin-bottom: 10px;
+}
+.departments-menu > .dropdown-menu .menu-item-has-children > .dropdown-menu li a:hover{
+    text-overflow: initial; 
+    overflow: visible;
+    max-width: inherit;
+    position: absolute;
+    z-index: 3;
+    background: #fff;
+}
+.departments-menu > .dropdown-menu .menu-item-has-children > .dropdown-menu li {
+    min-height: 25px;
+}
+.kc-col-container img{
+    max-height: 100%;
 }
